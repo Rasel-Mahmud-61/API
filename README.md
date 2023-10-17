@@ -1,4 +1,4 @@
-# fETCH API
+# FETCH API
 
 
   async function getdata(){
