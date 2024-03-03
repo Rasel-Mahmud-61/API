@@ -145,5 +145,15 @@ sessionStorage.setItem("name", "John Doe");
 sessionStorage.getItem("name");
 ```
 
+#  👉 Storage API    
+
+# Fetch API Example 
+```
+async function getText(file) {
+  let myObject = await fetch(file);
+  let myText = await myObject.text();
+  myDisplay(myText);
+}
+```
 
 
