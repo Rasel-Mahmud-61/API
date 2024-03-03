@@ -125,11 +125,25 @@ function go(n){
 }
 ```
 
+#  👉 Storage API
+
+
+#  localStorage Object 
+
+
+```
+localStorage.setItem("name", "John Doe");
+
+localStorage.getItem("name");
+```
+# sessionStorage Object
 
 
 
-
-
+```
+sessionStorage.setItem("name", "John Doe");
+sessionStorage.getItem("name");
+```
 
 
 
