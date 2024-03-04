@@ -156,4 +156,60 @@ async function getText(file) {
 }
 ```
 
+#  👉 Worker API   
+
+# Web Workers Example
+
+```
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<h2>JavaScript Web Workers API</h2>
+<p>Count numbers: <output id="result"></output></p>
+<button onclick="startWorker()">Start Worker</button> 
+<button onclick="stopWorker()">Stop Worker</button>
+<script src="index.js"></script>
+</body>
+</html>
+```
+
+```
+let w;
+
+
+function startWorker(){
+
+    if(typeof(w) == "undefined") {
+        w = new Worker("demo_workers.js");
+      }
+      
+    
+      w.onmessage =function(event){
+    
+        document.getElementById("result").innerHTML = event.data;
+      } 
+}
+```
+
+```
+let i=0;
+ function timedCount(){
+      i++;
+      postMessage(i);
+      setTimeout("timedCount()",500);
+
+
+ }
+timedCount();
+
+```
+
+
+
 
