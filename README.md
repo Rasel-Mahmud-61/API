@@ -209,6 +209,39 @@ let i=0;
 timedCount();
 
 ```
+#  👉 Axios 
+
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="demo"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.7/axios.min.js"></script>
+   
+ <script>
+    axios.get('https://jsonplaceholder.typicode.com/users')
+    .then(function(res){
+           res.data.forEach(element => {
+            document.getElementById('demo').innerHTML+= '<li>' + element.name + '</li>' ;
+
+
+           });
+    })
+    .catch(function(err){
+        console.log(err);
+    })
+ </script>
+</body>
+</html>
+
+
+```
 
 
 
